@@ -7,7 +7,7 @@ export const site = {
   contact: {
     email: "partners@meridianthirty.com",
     phone: "+1 (212) 555 0130",
-    address: "30 Hudson Yards, New York, NY",
+    address: "London, United Kingdom",
   },
   social: [
     { label: "LinkedIn", href: "#" },
