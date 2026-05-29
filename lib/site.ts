@@ -1,6 +1,6 @@
 export const site = {
-  name: "Meridian Thirty",
-  shortName: "M30",
+  name: "M30",
+  shortName: "Meridian Thirty",
   tagline: "Strategy with conviction. Outcomes that endure.",
   description:
     "Meridian Thirty is a boutique strategy consultancy partnering with leadership teams to navigate inflection points and build enduring institutions.",
