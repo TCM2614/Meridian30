@@ -35,29 +35,33 @@ export function Footer() {
   const year = new Date().getFullYear()
   return (
     <footer className="relative border-t border-hairline bg-background">
-      <Container className="py-20 lg:py-28">
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/30 to-transparent"
+      />
+      <Container className="py-24 lg:py-32">
+        <div className="grid gap-20 lg:grid-cols-12 lg:gap-12">
           <div className="lg:col-span-5">
             <Link
               href="/"
               className="flex items-baseline gap-2 text-ink"
               aria-label={`${site.name} home`}
             >
-              <span className="font-serif text-3xl tracking-tightest">
+              <span className="font-serif text-display-md tracking-tightest">
                 Meridian
               </span>
-              <span className="font-serif text-3xl tracking-tightest text-accent">
+              <span className="font-serif text-display-md tracking-tightest text-accent">
                 Thirty
               </span>
             </Link>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-fog">
+            <p className="mt-8 max-w-md editorial-body">
               {site.description}
             </p>
-            <div className="mt-10 space-y-2 text-sm text-fog">
+            <div className="mt-12 space-y-2 text-sm text-fog">
               <p className="text-ink">{site.contact.address}</p>
               <p>
                 <a
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors duration-700 hover:text-accent"
                   href={`mailto:${site.contact.email}`}
                 >
                   {site.contact.email}
@@ -65,7 +69,7 @@ export function Footer() {
               </p>
               <p>
                 <a
-                  className="transition-colors hover:text-accent"
+                  className="transition-colors duration-700 hover:text-accent"
                   href={`tel:${site.contact.phone.replace(/[^+\d]/g, "")}`}
                 >
                   {site.contact.phone}
@@ -77,15 +81,13 @@ export function Footer() {
           <div className="grid grid-cols-2 gap-12 sm:grid-cols-3 lg:col-span-7">
             {columns.map((col) => (
               <div key={col.title}>
-                <h4 className="text-eyebrow uppercase text-fog">
-                  {col.title}
-                </h4>
-                <ul className="mt-6 space-y-3">
+                <h4 className="label-editorial">{col.title}</h4>
+                <ul className="mt-7 space-y-4">
                   {col.links.map((link) => (
                     <li key={link.label}>
                       <Link
                         href={link.href}
-                        className="text-base text-ink transition-colors hover:text-accent"
+                        className="text-base text-ink transition-colors duration-700 hover:text-accent"
                       >
                         {link.label}
                       </Link>
@@ -97,7 +99,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-8 border-t border-hairline pt-10 text-sm text-fog md:flex-row md:items-center">
+        <div className="mt-24 flex flex-col items-start justify-between gap-8 border-t border-hairline pt-12 text-sm text-fog md:flex-row md:items-center">
           <p>
             © {year} {site.name}. All rights reserved.
           </p>
@@ -106,7 +108,7 @@ export function Footer() {
               <Link
                 key={l.href}
                 href={l.href}
-                className="transition-colors hover:text-ink"
+                className="transition-colors duration-700 hover:text-ink"
               >
                 {l.label}
               </Link>
@@ -117,7 +119,7 @@ export function Footer() {
               <a
                 key={s.label}
                 href={s.href}
-                className="transition-colors hover:text-ink"
+                className="transition-colors duration-700 hover:text-ink"
               >
                 {s.label}
               </a>

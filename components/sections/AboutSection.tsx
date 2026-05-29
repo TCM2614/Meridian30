@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
-import { FadeUp } from "@/components/ui/fade-up"
 import { Eyebrow } from "@/components/ui/eyebrow"
+import { LineReveal, Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 
 const stats = [
@@ -13,64 +13,58 @@ const stats = [
 
 export function AboutSection() {
   return (
-    <section className="py-24 lg:py-32">
+    <section className="section-y">
       <Container>
-        <div className="grid gap-16 lg:grid-cols-12 lg:gap-12">
+        <div className="grid gap-20 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <FadeUp>
+            <Reveal>
               <Eyebrow>About M30</Eyebrow>
-            </FadeUp>
-            <FadeUp delay={0.08}>
-              <h2 className="mt-6 max-w-[16ch] font-serif text-display-xl text-ink">
-                A boutique built for the consequential.
-              </h2>
-            </FadeUp>
+            </Reveal>
+            <h2 className="mt-8 max-w-[14ch] font-serif text-display-xl text-ink">
+              <LineReveal>A boutique built</LineReveal>
+              <LineReveal delay={0.1}>
+                for the <em className="accent-italic">consequential.</em>
+              </LineReveal>
+            </h2>
           </div>
 
           <div className="lg:col-span-7">
-            <FadeUp>
-              <p className="max-w-prose text-lg leading-relaxed text-fog">
+            <Reveal>
+              <p className="editorial-body">
                 Meridian Thirty was founded on a quiet conviction: that the
                 most consequential decisions an institution faces deserve
-                small, senior teams—free of the conflicts and apparatus that
-                slow larger firms.
+                small, senior teams — free of the conflicts and apparatus
+                that slow larger firms.
               </p>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <p className="mt-6 max-w-prose text-base leading-relaxed text-fog">
-                We work in deep partnership with chief executives, boards, and
-                investment committees. Our engagements are intentionally few,
-                always senior-led, and measured against the only standard that
-                matters: the long-term performance of the institutions we
-                serve.
+            </Reveal>
+            <Reveal delay={0.1} className="mt-8">
+              <p className="editorial-body text-base text-fog">
+                We work in deep partnership with chief executives, boards,
+                and investment committees. Our engagements are intentionally
+                few, always senior-led, and measured against the only
+                standard that matters: the long-term performance of the
+                institutions we serve.
               </p>
-            </FadeUp>
+            </Reveal>
 
-            <FadeUp delay={0.18}>
-              <ul className="mt-14 grid grid-cols-2 gap-px border border-hairline bg-hairline lg:grid-cols-4">
+            <Reveal delay={0.18}>
+              <ul className="mt-16 grid grid-cols-2 gap-8 border-t border-hairline pt-12 lg:grid-cols-4 lg:gap-10">
                 {stats.map((s) => (
-                  <li
-                    key={s.label}
-                    className="flex flex-col gap-3 bg-background p-6 lg:p-8"
-                  >
-                    <span className="font-serif text-4xl text-ink">
+                  <li key={s.label} className="flex flex-col gap-3">
+                    <span className="font-serif text-display-lg text-ink">
                       {s.value}
                     </span>
-                    <span className="text-eyebrow uppercase text-fog">
-                      {s.label}
-                    </span>
+                    <span className="label-editorial">{s.label}</span>
                   </li>
                 ))}
               </ul>
-            </FadeUp>
+            </Reveal>
 
-            <FadeUp delay={0.24}>
-              <div className="mt-12">
-                <Button asChild variant="outline" size="md">
-                  <Link href="/about">More about the firm</Link>
-                </Button>
-              </div>
-            </FadeUp>
+            <Reveal delay={0.28} className="mt-14">
+              <Button asChild variant="outline" size="md">
+                <Link href="/about">More about the firm</Link>
+              </Button>
+            </Reveal>
           </div>
         </div>
       </Container>

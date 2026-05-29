@@ -2,11 +2,11 @@
 
 import * as React from "react"
 import { Button } from "@/components/ui/button"
-import { FadeUp } from "@/components/ui/fade-up"
+import { Reveal } from "@/components/ui/reveal"
 
 const inputBase =
-  "w-full border border-hairline bg-transparent px-4 py-4 text-base text-ink placeholder:text-fog/70 focus:border-accent focus:outline-none focus:ring-0 transition-colors"
-const labelBase = "text-eyebrow uppercase text-fog"
+  "w-full border border-hairline bg-transparent px-5 py-4 text-base text-ink placeholder:text-fog/60 focus:border-accent focus:outline-none focus:ring-0 transition-colors duration-500"
+const labelBase = "label-editorial"
 
 export function ContactForm() {
   const [submitted, setSubmitted] = React.useState(false)
@@ -17,26 +17,24 @@ export function ContactForm() {
   }
 
   return (
-    <FadeUp as="div" className="lg:col-span-7">
+    <Reveal as="div" className="card-premium lg:col-span-7">
       <form
         onSubmit={handleSubmit}
-        className="border border-hairline bg-surface/40 p-8 backdrop-blur-sm lg:p-12"
+        className="relative z-10 p-10 lg:p-14"
       >
         {submitted ? (
-          <div className="flex min-h-[420px] flex-col items-start justify-center gap-6">
-            <span className="text-eyebrow uppercase text-accent">
-              Thank you
-            </span>
-            <h3 className="max-w-[20ch] font-serif text-3xl text-ink">
+          <div className="flex min-h-[460px] flex-col items-start justify-center gap-7">
+            <span className="label-editorial text-accent">Thank you</span>
+            <h3 className="max-w-[20ch] font-serif text-display-md text-ink">
               Your enquiry has been received.
             </h3>
-            <p className="max-w-prose text-base text-fog">
+            <p className="max-w-prose text-base leading-[1.75] text-fog">
               A partner will be in touch personally within one business day.
             </p>
           </div>
         ) : (
           <>
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="grid gap-8 sm:grid-cols-2">
               <div className="flex flex-col gap-3">
                 <label htmlFor="name" className={labelBase}>
                   Name
@@ -121,18 +119,19 @@ export function ContactForm() {
               </div>
             </div>
 
-            <div className="mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-md text-sm text-fog">
-                By submitting this form, you agree to our discreet handling of
-                your enquiry. We do not share information with third parties.
+            <div className="mt-12 flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-md text-sm leading-[1.7] text-fog">
+                By submitting this form, you agree to our discreet handling
+                of your enquiry. We do not share information with third
+                parties.
               </p>
-              <Button type="submit" size="lg" className="group" withArrow>
+              <Button type="submit" size="lg" withArrow>
                 Send enquiry
               </Button>
             </div>
           </>
         )}
       </form>
-    </FadeUp>
+    </Reveal>
   )
 }

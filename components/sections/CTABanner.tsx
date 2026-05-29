@@ -1,43 +1,50 @@
 import Link from "next/link"
 import { Container } from "@/components/ui/container"
-import { FadeUp } from "@/components/ui/fade-up"
+import { LineReveal, Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 
 export function CTABanner() {
   return (
-    <section className="relative overflow-hidden border-y border-hairline bg-surface">
+    <section className="relative isolate overflow-hidden border-y border-hairline bg-surface">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-radial-fade opacity-60"
+        className="pointer-events-none absolute inset-0 bg-accent-fade"
       />
-      <Container className="relative py-24 lg:py-32">
-        <div className="grid gap-12 lg:grid-cols-12 lg:items-end lg:gap-10">
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/40 to-transparent"
+      />
+      <Container className="relative section-y">
+        <div className="grid gap-16 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-8">
-            <FadeUp>
-              <h2 className="max-w-[20ch] font-serif text-display-xl text-ink">
-                The most important conversations are the ones worth taking
-                seriously.
-              </h2>
-            </FadeUp>
-            <FadeUp delay={0.1}>
-              <p className="mt-6 max-w-prose text-base leading-relaxed text-fog sm:text-lg">
-                If your institution is facing an inflection point—an agenda
-                that will define the next decade—we&apos;d welcome the
-                conversation.
+            <h2 className="max-w-[20ch] font-serif text-display-xl text-ink">
+              <LineReveal>The most important</LineReveal>
+              <LineReveal delay={0.08}>
+                conversations are the ones
+              </LineReveal>
+              <LineReveal delay={0.16}>
+                worth taking <em className="accent-italic">seriously.</em>
+              </LineReveal>
+            </h2>
+            <Reveal delay={0.3} className="mt-10">
+              <p className="editorial-body">
+                If your institution is facing an inflection point — an
+                agenda that will define the next decade — we&apos;d welcome
+                the conversation.
               </p>
-            </FadeUp>
+            </Reveal>
           </div>
-          <div className="flex flex-wrap items-center gap-4 lg:col-span-4 lg:justify-end">
-            <FadeUp delay={0.2}>
-              <Button asChild size="lg" className="group" withArrow>
+          <div className="flex flex-wrap items-center gap-5 lg:col-span-4 lg:justify-end">
+            <Reveal delay={0.35}>
+              <Button asChild size="lg" withArrow>
                 <Link href="/contact">Begin a conversation</Link>
               </Button>
-            </FadeUp>
-            <FadeUp delay={0.3}>
+            </Reveal>
+            <Reveal delay={0.45}>
               <Button asChild variant="outline" size="lg">
                 <Link href="/our-work">See our work</Link>
               </Button>
-            </FadeUp>
+            </Reveal>
           </div>
         </div>
       </Container>

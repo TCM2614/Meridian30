@@ -4,7 +4,7 @@ import { ArrowUpRight } from "lucide-react"
 import { PageHero } from "@/components/sections/PageHero"
 import { CTABanner } from "@/components/sections/CTABanner"
 import { Container } from "@/components/ui/container"
-import { FadeUp } from "@/components/ui/fade-up"
+import { Reveal } from "@/components/ui/reveal"
 import { insights } from "@/lib/site"
 
 export const metadata = {
@@ -20,68 +20,71 @@ export default function InsightsPage() {
     <>
       <PageHero
         eyebrow="Insights"
-        title="Editorial perspectives from our partners."
+        titleLines={[
+          "Editorial perspectives",
+          <>
+            from <em className="accent-italic">our</em> partners.
+          </>,
+        ]}
         description="A small body of work, written for executives. We publish only when we believe we have something useful and original to add."
       />
 
-      <section className="pb-24 lg:pb-32">
+      <section className="section-y-tight">
         <Container>
-          <FadeUp>
+          <Reveal>
             <Link
               href={featured.href}
-              className="group flex flex-col justify-between gap-12 border-y border-hairline py-16 lg:flex-row lg:items-end lg:gap-20 lg:py-20"
+              className="group flex flex-col justify-between gap-12 border-y border-hairline py-20 lg:flex-row lg:items-end lg:gap-24 lg:py-28"
             >
               <div className="max-w-3xl">
                 <div className="flex items-center gap-4 text-eyebrow uppercase text-fog">
                   <span className="text-accent">Featured</span>
                   <span>{featured.eyebrow}</span>
                 </div>
-                <h2 className="mt-6 font-serif text-display-xl text-ink transition-colors group-hover:text-accent">
+                <h2 className="mt-8 font-serif text-display-xl text-ink transition-colors duration-700 group-hover:text-accent">
                   {featured.title}
                 </h2>
-                <p className="mt-6 max-w-prose text-base leading-relaxed text-fog sm:text-lg">
-                  {featured.excerpt}
-                </p>
+                <p className="mt-8 editorial-body">{featured.excerpt}</p>
               </div>
-              <div className="flex items-center gap-6 text-sm text-fog">
+              <div className="flex shrink-0 items-center gap-6 text-sm text-fog">
                 <span>{featured.date}</span>
                 <span aria-hidden>·</span>
                 <span>{featured.readTime}</span>
                 <ArrowUpRight
-                  className="h-5 w-5 text-fog transition-all duration-500 ease-out-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
-                  strokeWidth={1.5}
+                  className="h-5 w-5 text-fog transition-all duration-700 ease-out-expo group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+                  strokeWidth={1.25}
                 />
               </div>
             </Link>
-          </FadeUp>
+          </Reveal>
 
-          <ul className="mt-16 grid gap-px bg-hairline sm:grid-cols-2 lg:grid-cols-3">
+          <ul className="mt-20 grid gap-7 sm:grid-cols-2 sm:gap-8 lg:grid-cols-3 lg:gap-10">
             {rest.map((ins, i) => (
-              <FadeUp
+              <Reveal
                 key={ins.title}
-                delay={i * 0.05}
+                delay={i * 0.06}
                 as="li"
-                className="group h-full bg-background"
+                className="card-premium group h-full"
               >
                 <Link
                   href={ins.href}
-                  className="flex h-full flex-col gap-6 p-8 transition-colors duration-500 hover:bg-surface lg:p-10"
+                  className="relative z-10 flex h-full flex-col gap-6 p-9 lg:p-11"
                 >
                   <span className="text-eyebrow uppercase text-accent">
                     {ins.eyebrow}
                   </span>
-                  <h3 className="font-serif text-2xl text-ink transition-colors group-hover:text-accent">
+                  <h3 className="font-serif text-2xl leading-[1.2] text-ink transition-colors duration-700 group-hover:text-accent lg:text-[1.65rem]">
                     {ins.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-fog">
+                  <p className="text-[0.95rem] leading-[1.7] text-fog">
                     {ins.excerpt}
                   </p>
-                  <div className="mt-auto flex items-center justify-between text-sm text-fog">
+                  <div className="mt-auto flex items-center justify-between border-t border-hairline pt-6 text-sm text-fog">
                     <span>{ins.date}</span>
                     <span>{ins.readTime}</span>
                   </div>
                 </Link>
-              </FadeUp>
+              </Reveal>
             ))}
           </ul>
         </Container>

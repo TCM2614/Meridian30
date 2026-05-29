@@ -6,21 +6,27 @@ import { ArrowUpRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-none text-sm font-medium tracking-wide transition-all duration-300 ease-out-expo focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent disabled:pointer-events-none disabled:opacity-50",
+  [
+    "group inline-flex items-center justify-center gap-3 whitespace-nowrap rounded-none",
+    "text-sm font-medium tracking-[0.01em] uppercase",
+    "transition-[color,background-color,border-color,transform,box-shadow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]",
+    "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-background",
+    "disabled:pointer-events-none disabled:opacity-50",
+  ].join(" "),
   {
     variants: {
       variant: {
         primary:
           "bg-accent text-background hover:bg-ink hover:text-background",
         outline:
-          "border border-hairline text-ink hover:border-accent hover:text-accent",
+          "border border-hairline-strong text-ink hover:border-accent hover:text-accent",
         ghost: "text-ink hover:text-accent",
-        link: "text-accent underline-offset-4 hover:underline px-0",
+        link: "px-0 normal-case tracking-normal text-accent underline-offset-4 hover:underline",
       },
       size: {
-        sm: "h-10 px-5 text-xs",
-        md: "h-12 px-7 text-sm",
-        lg: "h-14 px-9 text-sm",
+        sm: "h-10 px-5 text-[0.7rem]",
+        md: "h-12 px-7 text-[0.72rem]",
+        lg: "h-14 px-9 text-[0.74rem]",
       },
     },
     defaultVariants: {
@@ -53,11 +59,11 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
           children
         ) : (
           <>
-            <span>{children}</span>
+            <span className="leading-none">{children}</span>
             {withArrow && (
               <ArrowUpRight
-                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                strokeWidth={1.5}
+                className="h-4 w-4 transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                strokeWidth={1.25}
               />
             )}
           </>

@@ -1,60 +1,48 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Container } from "@/components/ui/container"
 import { Eyebrow } from "@/components/ui/eyebrow"
-
-const ease = [0.16, 1, 0.3, 1] as const
+import { LineReveal, Reveal } from "@/components/ui/reveal"
 
 type PageHeroProps = {
   eyebrow: string
-  title: React.ReactNode
+  /**
+   * Render lines explicitly. Each entry is one visual line; pass `<em/>` for
+   * italic editorial accents. Strings are wrapped automatically.
+   */
+  titleLines: React.ReactNode[]
   description?: React.ReactNode
   meta?: React.ReactNode
 }
 
-export function PageHero({ eyebrow, title, description, meta }: PageHeroProps) {
+export function PageHero({
+  eyebrow,
+  titleLines,
+  description,
+  meta,
+}: PageHeroProps) {
   return (
-    <section className="relative isolate overflow-hidden pb-20 pt-36 lg:pb-28 lg:pt-44">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-radial-fade"
-      />
+    <section className="relative isolate overflow-hidden bg-hero-gradient pb-24 pt-44 lg:pb-32 lg:pt-56">
       <Container>
-        <motion.div
-          initial={{ opacity: 0, y: 16 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease }}
-        >
+        <Reveal immediate>
           <Eyebrow>{eyebrow}</Eyebrow>
-        </motion.div>
-        <motion.h1
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1, ease }}
-          className="mt-8 max-w-[20ch] font-serif text-display-2xl text-ink"
-        >
-          {title}
-        </motion.h1>
+        </Reveal>
+        <h1 className="mt-12 max-w-[18ch] font-serif text-display-2xl text-ink">
+          {titleLines.map((line, i) => (
+            <LineReveal key={i} immediate delay={0.05 + i * 0.1}>
+              {line}
+            </LineReveal>
+          ))}
+        </h1>
         {description ? (
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.22, ease }}
-            className="mt-8 max-w-prose text-lg leading-relaxed text-fog"
-          >
-            {description}
-          </motion.p>
+          <Reveal immediate delay={0.5} className="mt-12">
+            <p className="editorial-body">{description}</p>
+          </Reveal>
         ) : null}
         {meta ? (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.9, delay: 0.4, ease }}
-            className="mt-14"
-          >
+          <Reveal immediate delay={0.65} className="mt-16">
             {meta}
-          </motion.div>
+          </Reveal>
         ) : null}
       </Container>
     </section>

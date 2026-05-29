@@ -1,112 +1,110 @@
 "use client"
 
 import Link from "next/link"
-import Image from "next/image"
 import { motion } from "framer-motion"
 import { ArrowDown } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Container } from "@/components/ui/container"
-import { Eyebrow } from "@/components/ui/eyebrow"
-
-const ease = [0.16, 1, 0.3, 1] as const
+import { LineReveal, Reveal } from "@/components/ui/reveal"
+import { ParallaxImage } from "@/components/ui/parallax-image"
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden pt-36 lg:pt-40">
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0 -z-10 bg-radial-fade"
-      />
+    <section className="relative isolate overflow-hidden bg-hero-gradient pt-44 lg:pt-56">
       <Container size="wide">
-        <div className="grid items-end gap-16 pb-20 lg:grid-cols-12 lg:gap-10 lg:pb-32">
+        <div className="grid items-end gap-20 pb-28 lg:grid-cols-12 lg:gap-12 lg:pb-40">
           <div className="lg:col-span-7">
             <motion.div
-              initial={{ opacity: 0, y: 16 }}
+              initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease }}
+              transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+              className="label-editorial flex items-center gap-3"
             >
-              <Eyebrow>Boutique Strategy Consultancy</Eyebrow>
+              <span aria-hidden className="h-px w-10 bg-accent/60" />
+              Boutique Strategy Consultancy · Est. 2014
             </motion.div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.1, ease }}
-              className="mt-8 max-w-[18ch] font-serif text-display-2xl text-ink"
-            >
-              Strategy with conviction.
-              <br />
-              <span className="text-accent">Outcomes that endure.</span>
-            </motion.h1>
+            <h1 className="mt-12 max-w-[16ch] font-serif text-display-3xl text-ink">
+              <LineReveal immediate delay={0.05}>
+                Strategy with
+              </LineReveal>
+              <LineReveal immediate delay={0.18}>
+                <em className="accent-italic">conviction.</em>
+              </LineReveal>
+              <LineReveal immediate delay={0.34}>
+                Outcomes that endure.
+              </LineReveal>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.25, ease }}
-              className="mt-8 max-w-prose text-lg leading-relaxed text-fog"
+            <Reveal
+              immediate
+              delay={0.55}
+              className="mt-12 max-w-editorial text-lg leading-[1.8] text-fog sm:text-xl"
             >
-              Meridian Thirty partners with leadership teams at the world&apos;s
-              most consequential institutions—shaping strategy, accelerating
-              transformation, and building organisations designed to compound
-              advantage for decades.
-            </motion.p>
+              <p>
+                Meridian Thirty partners with leadership teams at the
+                world&apos;s most consequential institutions — shaping
+                strategy, accelerating transformation, and building
+                organisations designed to compound advantage for decades.
+              </p>
+            </Reveal>
 
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, delay: 0.4, ease }}
-              className="mt-12 flex flex-wrap items-center gap-4"
+            <Reveal
+              immediate
+              delay={0.7}
+              className="mt-14 flex flex-wrap items-center gap-5"
             >
-              <Button asChild size="lg" className="group" withArrow>
+              <Button asChild size="lg" withArrow>
                 <Link href="/our-work">Explore our work</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href="/contact">Begin a conversation</Link>
               </Button>
-            </motion.div>
+            </Reveal>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1.1, delay: 0.35, ease }}
+          <Reveal
+            immediate
+            delay={0.4}
+            duration={1.2}
             className="lg:col-span-5"
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden">
-              <Image
-                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1400&q=80"
+            <div className="group relative">
+              <ParallaxImage
+                src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
                 alt="Executive consulting environment"
-                fill
+                aspect="aspect-[4/5]"
                 priority
-                sizes="(max-width: 1024px) 100vw, 40vw"
-                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 42vw"
+                hoverZoom
+                wrapperClassName="shadow-image-frame"
+                range={120}
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
-              <div className="absolute bottom-6 left-6 right-6 flex items-end justify-between gap-6 text-eyebrow uppercase text-fog">
+              <div className="pointer-events-none absolute bottom-7 left-7 right-7 flex items-end justify-between gap-6 text-eyebrow uppercase text-fog/90">
                 <span>Est. 2014</span>
-                <span className="text-right">
-                  Four practices.
+                <span className="text-right leading-[1.6]">
+                  Four practices
                   <br />
-                  Twelve sectors.
+                  Twelve sectors
                 </span>
               </div>
             </div>
-          </motion.div>
+          </Reveal>
         </div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.7, ease }}
-          className="hairline-t flex flex-col items-start gap-6 py-8 sm:flex-row sm:items-center sm:justify-between"
+          transition={{ duration: 1.2, delay: 0.9, ease: [0.16, 1, 0.3, 1] }}
+          className="hairline-t flex flex-col items-start gap-8 py-10 sm:flex-row sm:items-center sm:justify-between"
         >
-          <p className="max-w-prose text-sm leading-relaxed text-fog">
+          <p className="max-w-editorial text-base leading-[1.8] text-fog">
             Independent. Senior-led. Built for the inflection points that
             define an institution&apos;s next decade.
           </p>
           <div className="flex items-center gap-3 text-eyebrow uppercase text-fog">
-            <ArrowDown className="h-4 w-4" strokeWidth={1.5} />
+            <ArrowDown className="h-4 w-4" strokeWidth={1.25} />
             <span>Scroll</span>
           </div>
         </motion.div>

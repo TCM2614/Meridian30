@@ -1,7 +1,7 @@
 import { PageHero } from "@/components/sections/PageHero"
 import { CTABanner } from "@/components/sections/CTABanner"
 import { Container } from "@/components/ui/container"
-import { FadeUp } from "@/components/ui/fade-up"
+import { Reveal } from "@/components/ui/reveal"
 import { Eyebrow } from "@/components/ui/eyebrow"
 import { leadership } from "@/lib/site"
 
@@ -25,7 +25,7 @@ const principles = [
   {
     title: "Independent by design.",
     body:
-      "We are partner-owned and conflict-free—free to be honest with the leaders we serve, including when honesty is uncomfortable.",
+      "We are partner-owned and conflict-free — free to be honest with the leaders we serve, including when honesty is uncomfortable.",
   },
   {
     title: "Measured by long-term outcomes.",
@@ -39,69 +39,77 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About"
-        title="A boutique built for the consequential."
-        description="Meridian Thirty was founded on a quiet conviction: that the most consequential decisions an institution faces deserve small, senior teams—free of the conflicts and apparatus that slow larger firms."
+        titleLines={[
+          "A boutique built",
+          <>
+            for the <em className="accent-italic">consequential.</em>
+          </>,
+        ]}
+        description="Meridian Thirty was founded on a quiet conviction: that the most consequential decisions an institution faces deserve small, senior teams — free of the conflicts and apparatus that slow larger firms."
       />
 
-      <section className="pb-24 lg:pb-32">
+      <section className="section-y-tight">
         <Container>
-          <div className="grid gap-12 border-y border-hairline py-16 lg:grid-cols-12 lg:gap-10 lg:py-20">
+          <div className="grid gap-16 border-y border-hairline py-20 lg:grid-cols-12 lg:gap-12 lg:py-28">
             <div className="lg:col-span-4">
               <Eyebrow>Principles</Eyebrow>
             </div>
-            <ul className="space-y-12 lg:col-span-8">
+            <ul className="space-y-16 lg:col-span-8">
               {principles.map((p, i) => (
-                <FadeUp
+                <Reveal
                   key={p.title}
-                  delay={i * 0.05}
+                  delay={i * 0.06}
                   as="li"
-                  className="grid gap-4 lg:grid-cols-12 lg:gap-8"
+                  className="grid gap-4 lg:grid-cols-12 lg:gap-10"
                 >
-                  <span className="font-serif text-xl text-accent lg:col-span-2">
+                  <span className="font-serif text-lg text-accent lg:col-span-2">
                     0{i + 1}
                   </span>
                   <div className="lg:col-span-10">
-                    <h3 className="font-serif text-2xl text-ink">
+                    <h3 className="font-serif text-display-md text-ink">
                       {p.title}
                     </h3>
-                    <p className="mt-3 max-w-prose text-base leading-relaxed text-fog">
+                    <p className="mt-5 max-w-editorial text-base leading-[1.75] text-fog">
                       {p.body}
                     </p>
                   </div>
-                </FadeUp>
+                </Reveal>
               ))}
             </ul>
           </div>
 
-          <div className="grid gap-12 py-20 lg:grid-cols-12 lg:gap-10 lg:py-28">
+          <div className="grid gap-16 py-24 lg:grid-cols-12 lg:gap-12 lg:py-32">
             <div className="lg:col-span-4">
               <Eyebrow>Leadership</Eyebrow>
-              <h2 className="mt-6 font-serif text-display-lg text-ink">
+              <h2 className="mt-8 font-serif text-display-lg text-ink">
                 Partners on the work.
               </h2>
-              <p className="mt-6 max-w-prose text-base leading-relaxed text-fog">
+              <p className="mt-8 editorial-body">
                 A small leadership team with a deliberately broad operating
-                background—because the institutions we serve do not operate in
-                a single dimension.
+                background — because the institutions we serve do not operate
+                in a single dimension.
               </p>
             </div>
-            <ul className="grid gap-px bg-hairline sm:grid-cols-2 lg:col-span-8">
-              {leadership.map((m) => (
-                <FadeUp
+            <ul className="grid gap-7 sm:grid-cols-2 sm:gap-8 lg:col-span-8 lg:gap-10">
+              {leadership.map((m, i) => (
+                <Reveal
                   key={m.name}
+                  delay={i * 0.05}
                   as="li"
-                  className="bg-background p-8 lg:p-10"
+                  className="card-premium"
                 >
-                  <h3 className="font-serif text-2xl text-ink">
-                    {m.name}
-                  </h3>
-                  <p className="mt-2 text-eyebrow uppercase text-accent">
-                    {m.role}
-                  </p>
-                  <p className="mt-6 max-w-prose text-sm leading-relaxed text-fog">
-                    {m.bio}
-                  </p>
-                </FadeUp>
+                  <div className="relative z-10 p-9 lg:p-11">
+                    <h3 className="font-serif text-display-md text-ink">
+                      {m.name}
+                    </h3>
+                    <p className="mt-3 label-editorial text-accent">
+                      {m.role}
+                    </p>
+                    <p className="mt-7 max-w-prose text-[0.95rem] leading-[1.7] text-fog">
+                      {m.bio}
+                    </p>
+                  </div>
+                </Reveal>
               ))}
             </ul>
           </div>
