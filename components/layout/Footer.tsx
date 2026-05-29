@@ -23,10 +23,7 @@ const columns = [
   {
     title: "Offices",
     links: [
-      { label: "New York", href: "#" },
       { label: "London", href: "#" },
-      { label: "Singapore", href: "#" },
-      { label: "Dubai", href: "#" },
     ],
   },
 ]
