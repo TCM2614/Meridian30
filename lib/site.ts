@@ -5,8 +5,8 @@ export const site = {
   description:
     "Meridian Thirty is a boutique strategy consultancy partnering with leadership teams to navigate inflection points and build enduring institutions.",
   contact: {
-    email: "partners@meridianthirty.com",
-    phone: "+1 (212) 555 0130",
+    email: "",
+    phone: "",
     address: "London, United Kingdom",
   },
   social: [

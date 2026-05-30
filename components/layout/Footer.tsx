@@ -54,25 +54,6 @@ export function Footer() {
             <p className="mt-8 max-w-md editorial-body">
               {site.description}
             </p>
-            <div className="mt-12 space-y-2 text-sm text-fog">
-              <p className="text-ink">{site.contact.address}</p>
-              <p>
-                <a
-                  className="transition-colors duration-700 hover:text-accent"
-                  href={`mailto:${site.contact.email}`}
-                >
-                  {site.contact.email}
-                </a>
-              </p>
-              <p>
-                <a
-                  className="transition-colors duration-700 hover:text-accent"
-                  href={`tel:${site.contact.phone.replace(/[^+\d]/g, "")}`}
-                >
-                  {site.contact.phone}
-                </a>
-              </p>
-            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-12 sm:grid-cols-3 lg:col-span-7">
