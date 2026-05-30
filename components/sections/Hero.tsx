@@ -22,18 +22,18 @@ export function Hero() {
               className="label-editorial flex items-center gap-3"
             >
               <span aria-hidden className="h-px w-10 bg-accent/60" />
-              Boutique Strategy Consultancy · Est. 2014
+              Boutique Delivery Consultancy · London
             </motion.div>
 
             <h1 className="mt-12 max-w-[16ch] font-serif text-display-3xl text-ink">
               <LineReveal immediate delay={0.05}>
-                Strategy with
+                Delivered expertise.
               </LineReveal>
-              <LineReveal immediate delay={0.18}>
-                <em className="accent-italic">conviction.</em>
+              <LineReveal immediate delay={0.2}>
+                From strategy
               </LineReveal>
               <LineReveal immediate delay={0.34}>
-                Outcomes that endure.
+                to <em className="accent-italic">implementation.</em>
               </LineReveal>
             </h1>
 
@@ -43,10 +43,11 @@ export function Hero() {
               className="mt-12 max-w-editorial text-lg leading-[1.8] text-fog sm:text-xl"
             >
               <p>
-                Meridian Thirty partners with leadership teams at the
-                world&apos;s most consequential institutions — shaping
-                strategy, accelerating transformation, and building
-                organisations designed to compound advantage for decades.
+                Meridian Thirty is a boutique consultancy of senior
+                practitioners. We deliver programme management, advisory,
+                technology implementation support, and bid leadership for
+                organisations across the public and private sectors —
+                embedded alongside the leaders accountable for the outcome.
               </p>
             </Reveal>
 
@@ -73,7 +74,7 @@ export function Hero() {
             <div className="group relative">
               <ParallaxImage
                 src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80"
-                alt="Executive consulting environment"
+                alt="Senior practitioners in client environment"
                 aspect="aspect-[4/5]"
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"
@@ -82,11 +83,11 @@ export function Hero() {
                 range={120}
               />
               <div className="pointer-events-none absolute bottom-7 left-7 right-7 flex items-end justify-between gap-6 text-eyebrow uppercase text-fog/90">
-                <span>Est. 2014</span>
+                <span>London</span>
                 <span className="text-right leading-[1.6]">
                   Four practices
                   <br />
-                  Twelve sectors
+                  Five sectors
                 </span>
               </div>
             </div>
@@ -100,8 +101,7 @@ export function Hero() {
           className="hairline-t flex flex-col items-start gap-8 py-10 sm:flex-row sm:items-center sm:justify-between"
         >
           <p className="max-w-editorial text-base leading-[1.8] text-fog">
-            Independent. Senior-led. Built for the inflection points that
-            define an institution&apos;s next decade.
+            Independent. Senior-led. Engaged where the work needs to land.
           </p>
           <div className="flex items-center gap-3 text-eyebrow uppercase text-fog">
             <ArrowDown className="h-4 w-4" strokeWidth={1.25} />

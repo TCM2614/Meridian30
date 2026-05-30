@@ -7,7 +7,6 @@ const columns = [
     title: "Firm",
     links: [
       { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
       { label: "Contact", href: "/contact" },
     ],
   },
@@ -17,16 +16,12 @@ const columns = [
       { label: "Capabilities", href: "/capabilities" },
       { label: "Industries", href: "/industries" },
       { label: "Our Work", href: "/our-work" },
-      { label: "Insights", href: "/insights" },
     ],
   },
   {
-    title: "Offices",
+    title: "Office",
     links: [
-      { label: "New York", href: "#" },
-      { label: "London", href: "#" },
-      { label: "Singapore", href: "#" },
-      { label: "Dubai", href: "#" },
+      { label: "London, UK", href: "/contact" },
     ],
   },
 ]
@@ -58,7 +53,7 @@ export function Footer() {
               {site.description}
             </p>
             <div className="mt-12 space-y-2 text-sm text-fog">
-              <p className="text-ink">{site.contact.address}</p>
+              <p className="text-ink">{site.contact.fullAddress}</p>
               <p>
                 <a
                   className="transition-colors duration-700 hover:text-accent"

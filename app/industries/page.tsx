@@ -7,7 +7,7 @@ import { industries } from "@/lib/site"
 export const metadata = {
   title: "Industries",
   description:
-    "Deep sector expertise across financial services, energy, healthcare, industrials, technology, consumer, private capital, and the public sector.",
+    "Experience supporting programmes, transformation initiatives, reporting solutions, and technology implementations across financial services, public sector, technology, energy, and infrastructure.",
 }
 
 export default function IndustriesPage() {
@@ -16,13 +16,12 @@ export default function IndustriesPage() {
       <PageHero
         eyebrow="Industries"
         titleLines={[
-          "Sector depth,",
+          "Sector experience,",
           <>
-            executed by <em className="accent-italic">senior</em>
+            applied to <em className="accent-italic">delivery.</em>
           </>,
-          "teams.",
         ]}
-        description="Our industry leaders combine operating experience with the rigour of strategy. Each sector is led by partners who have spent careers, not engagements, in the field."
+        description="Experience supporting programmes, transformation initiatives, reporting solutions, and technology implementations within these sectors. Each engagement is led by partners with first-hand experience of the operating environment."
       />
 
       <section className="section-y-tight">

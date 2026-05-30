@@ -8,31 +8,8 @@ import { site } from "@/lib/site"
 export const metadata = {
   title: "Contact",
   description:
-    "Begin a conversation with Meridian Thirty. We respond personally to every enquiry from a leadership team.",
+    "Begin a conversation with Meridian Thirty. London-based, partner-led, with a one-business-day response commitment to every enquiry.",
 }
-
-const offices = [
-  {
-    city: "New York",
-    address: "30 Hudson Yards, New York, NY",
-    email: "newyork@meridianthirty.com",
-  },
-  {
-    city: "London",
-    address: "20 Curzon Street, Mayfair, London W1J",
-    email: "london@meridianthirty.com",
-  },
-  {
-    city: "Singapore",
-    address: "Marina Bay Financial Centre, Singapore",
-    email: "singapore@meridianthirty.com",
-  },
-  {
-    city: "Dubai",
-    address: "DIFC Gate Building, Dubai",
-    email: "dubai@meridianthirty.com",
-  },
-]
 
 export default function ContactPage() {
   return (
@@ -45,7 +22,7 @@ export default function ContactPage() {
             <em className="accent-italic">conversation.</em>
           </>,
         ]}
-        description="Every enquiry from a leadership team is read by a partner and answered personally. We typically respond within one business day."
+        description="Every enquiry is read by a partner and answered personally. We typically respond within one business day."
       />
 
       <section className="section-y-tight">
@@ -62,7 +39,7 @@ export default function ContactPage() {
               </Reveal>
               <Reveal delay={0.16}>
                 <div className="mt-12 space-y-3 text-base">
-                  <p className="text-ink">{site.contact.address}</p>
+                  <p className="text-ink">{site.contact.fullAddress}</p>
                   <p>
                     <a
                       className="text-fog transition-colors duration-700 hover:text-accent"
@@ -83,29 +60,37 @@ export default function ContactPage() {
               </Reveal>
 
               <Reveal delay={0.24}>
-                <div className="mt-20">
-                  <h3 className="label-editorial">Offices</h3>
-                  <ul className="mt-8 grid gap-7 sm:grid-cols-2 sm:gap-8">
-                    {offices.map((o) => (
-                      <li key={o.city} className="card-premium">
-                        <div className="relative z-10 p-7 lg:p-8">
-                          <p className="font-serif text-xl text-ink">
-                            {o.city}
-                          </p>
-                          <p className="mt-4 text-sm leading-[1.7] text-fog">
-                            {o.address}
-                          </p>
-                          <a
-                            href={`mailto:${o.email}`}
-                            className="mt-4 block text-sm text-accent transition-colors duration-700 hover:text-ink"
-                          >
-                            {o.email}
-                          </a>
-                        </div>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                <ul className="mt-16 grid gap-7 sm:grid-cols-2 sm:gap-8">
+                  <li className="card-premium">
+                    <div className="relative z-10 p-7 lg:p-8">
+                      <p className="label-editorial text-accent">
+                        Where to find us
+                      </p>
+                      <p className="mt-5 font-serif text-xl text-ink">
+                        London, United Kingdom
+                      </p>
+                      <p className="mt-4 text-sm leading-[1.7] text-fog">
+                        Our practice is based in central London. We work with
+                        clients across the United Kingdom, Europe, and select
+                        international engagements.
+                      </p>
+                    </div>
+                  </li>
+                  <li className="card-premium">
+                    <div className="relative z-10 p-7 lg:p-8">
+                      <p className="label-editorial text-accent">
+                        Response commitment
+                      </p>
+                      <p className="mt-5 font-serif text-xl text-ink">
+                        Within one business day
+                      </p>
+                      <p className="mt-4 text-sm leading-[1.7] text-fog">
+                        Every enquiry is answered personally by a partner.
+                        We will not route you through a sales team.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
               </Reveal>
             </div>
 
