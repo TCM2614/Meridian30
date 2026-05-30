@@ -5,10 +5,10 @@ export const site = {
   description:
     "Meridian Thirty is a boutique consultancy of senior practitioners. We deliver programme management, advisory, technology implementation support, and bid leadership for organisations across the public and private sectors.",
   contact: {
-    email: "hello@meridianthirty.com",
-    phone: "+44 20 7946 0130",
+    email: "",
+    phone: "",
     address: "London, United Kingdom",
-    fullAddress: "1 Cornhill, London EC3V 3ND, United Kingdom",
+    fullAddress: "",
     response: "Within one business day",
   },
   social: [

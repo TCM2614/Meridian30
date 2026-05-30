@@ -3,7 +3,6 @@ import { ContactForm } from "@/components/sections/ContactForm"
 import { Container } from "@/components/ui/container"
 import { Eyebrow } from "@/components/ui/eyebrow"
 import { Reveal } from "@/components/ui/reveal"
-import { site } from "@/lib/site"
 
 export const metadata = {
   title: "Contact",
@@ -38,25 +37,11 @@ export default function ContactPage() {
                 </h2>
               </Reveal>
               <Reveal delay={0.16}>
-                <div className="mt-12 space-y-3 text-base">
-                  <p className="text-ink">{site.contact.fullAddress}</p>
-                  <p>
-                    <a
-                      className="text-fog transition-colors duration-700 hover:text-accent"
-                      href={`mailto:${site.contact.email}`}
-                    >
-                      {site.contact.email}
-                    </a>
-                  </p>
-                  <p>
-                    <a
-                      className="text-fog transition-colors duration-700 hover:text-accent"
-                      href={`tel:${site.contact.phone.replace(/[^+\d]/g, "")}`}
-                    >
-                      {site.contact.phone}
-                    </a>
-                  </p>
-                </div>
+                <p className="mt-12 editorial-body">
+                  The best way to reach us is through the form. Every
+                  enquiry is read by a partner and answered personally —
+                  typically within one business day.
+                </p>
               </Reveal>
 
               <Reveal delay={0.24}>
