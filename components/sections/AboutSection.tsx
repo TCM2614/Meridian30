@@ -5,10 +5,10 @@ import { LineReveal, Reveal } from "@/components/ui/reveal"
 import { Button } from "@/components/ui/button"
 
 const stats = [
-  { value: "200+", label: "Engagements delivered" },
-  { value: "12", label: "Sectors of depth" },
-  { value: "4", label: "Continents served" },
-  { value: "92%", label: "Repeat client rate" },
+  { value: "100%", label: "Senior-led engagements" },
+  { value: "4", label: "Capability areas" },
+  { value: "5", label: "Sectors of focus" },
+  { value: "1:1", label: "Partner-to-engagement" },
 ]
 
 export function AboutSection() {
@@ -20,10 +20,10 @@ export function AboutSection() {
             <Reveal>
               <Eyebrow>About M30</Eyebrow>
             </Reveal>
-            <h2 className="mt-8 max-w-[14ch] font-serif text-display-xl text-ink">
-              <LineReveal>A boutique built</LineReveal>
+            <h2 className="mt-8 max-w-[16ch] font-serif text-display-xl text-ink">
+              <LineReveal>Senior practitioners,</LineReveal>
               <LineReveal delay={0.1}>
-                for the <em className="accent-italic">consequential.</em>
+                on the <em className="accent-italic">work.</em>
               </LineReveal>
             </h2>
           </div>
@@ -31,19 +31,19 @@ export function AboutSection() {
           <div className="lg:col-span-7">
             <Reveal>
               <p className="editorial-body">
-                Meridian Thirty was founded on a quiet conviction: that the
-                most consequential decisions an institution faces deserve
-                small, senior teams — free of the conflicts and apparatus
-                that slow larger firms.
+                Meridian Thirty is a small, senior consultancy. Our
+                practitioners are former programme directors, business
+                analysts, and bid leads from large consultancies, systems
+                integrators, and operating businesses — and we remain on the
+                work from first conversation through to service transition.
               </p>
             </Reveal>
             <Reveal delay={0.1} className="mt-8">
               <p className="editorial-body text-base text-fog">
-                We work in deep partnership with chief executives, boards,
-                and investment committees. Our engagements are intentionally
-                few, always senior-led, and measured against the only
-                standard that matters: the long-term performance of the
-                institutions we serve.
+                We accept a deliberate number of engagements at any one time.
+                Each is led by a partner; engagement teams are intentionally
+                small. Clients work directly with the people doing the work —
+                not through layers of management.
               </p>
             </Reveal>
 

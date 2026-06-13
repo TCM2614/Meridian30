@@ -20,18 +20,18 @@ export function CapabilityCards() {
             <Reveal>
               <Eyebrow>Capabilities</Eyebrow>
             </Reveal>
-            <h2 className="mt-8 max-w-[14ch] font-serif text-display-xl text-ink">
+            <h2 className="mt-8 max-w-[16ch] font-serif text-display-xl text-ink">
               <LineReveal>Four practices.</LineReveal>
               <LineReveal delay={0.1}>
-                <em className="accent-italic">One</em> operating
+                <em className="accent-italic">One</em> delivery
               </LineReveal>
               <LineReveal delay={0.18}>cadence.</LineReveal>
             </h2>
             <Reveal delay={0.3} className="mt-10">
               <p className="editorial-body">
                 We deploy small, senior teams across four interlocking
-                practices — integrated under a single agenda owned by the CEO
-                and the board.
+                practices — embedded with client teams and accountable for
+                landing the work, not just advising on it.
               </p>
             </Reveal>
           </div>
@@ -65,7 +65,7 @@ export function CapabilityCards() {
                         strokeWidth={1.25}
                       />
                     </div>
-                    <h3 className="mt-20 font-serif text-display-md text-ink lg:mt-28">
+                    <h3 className="mt-16 max-w-[16ch] font-serif text-[1.65rem] leading-[1.15] text-ink lg:mt-24 lg:text-[1.85rem]">
                       {cap.title}
                     </h3>
                     <p className="mt-5 max-w-prose text-[0.95rem] leading-[1.7] text-fog">

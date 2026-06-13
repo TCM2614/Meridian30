@@ -3,36 +3,13 @@ import { CTABanner } from "@/components/sections/CTABanner"
 import { Container } from "@/components/ui/container"
 import { Reveal } from "@/components/ui/reveal"
 import { Eyebrow } from "@/components/ui/eyebrow"
-import { leadership } from "@/lib/site"
+import { leadership, principles, technologies } from "@/lib/site"
 
 export const metadata = {
   title: "About",
   description:
-    "Meridian Thirty is a boutique strategy consultancy. Independent, senior-led, and built for the inflection points that define an institution's next decade.",
+    "Meridian Thirty is a boutique consultancy of senior practitioners. Independent, partner-led, and engaged where the work needs to land.",
 }
-
-const principles = [
-  {
-    title: "Senior-led, always.",
-    body:
-      "Every engagement is owned by a partner who is on the work, every week. There are no pyramids, no rotations, and no surrogates.",
-  },
-  {
-    title: "Few engagements, deeply done.",
-    body:
-      "We accept a small number of engagements each year. The discipline of saying no is what allows us to deliver the work we accept.",
-  },
-  {
-    title: "Independent by design.",
-    body:
-      "We are partner-owned and conflict-free — free to be honest with the leaders we serve, including when honesty is uncomfortable.",
-  },
-  {
-    title: "Measured by long-term outcomes.",
-    body:
-      "We are paid for our work; we are judged by the long-term performance of the institutions we help to shape.",
-  },
-]
 
 export default function AboutPage() {
   return (
@@ -40,12 +17,12 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         titleLines={[
-          "A boutique built",
+          "A small, senior",
           <>
-            for the <em className="accent-italic">consequential.</em>
+            <em className="accent-italic">delivery</em> firm.
           </>,
         ]}
-        description="Meridian Thirty was founded on a quiet conviction: that the most consequential decisions an institution faces deserve small, senior teams — free of the conflicts and apparatus that slow larger firms."
+        description="Meridian Thirty is a boutique consultancy of senior practitioners. We deliver programmes, advisory, technology implementation support, and bid leadership for organisations across the public and private sectors — and we remain on the work from first conversation through to service transition."
       />
 
       <section className="section-y-tight">
@@ -85,9 +62,9 @@ export default function AboutPage() {
                 Partners on the work.
               </h2>
               <p className="mt-8 editorial-body">
-                A small leadership team with a deliberately broad operating
-                background — because the institutions we serve do not operate
-                in a single dimension.
+                A small leadership team with direct delivery backgrounds —
+                because the leaders we serve want to work with the people
+                doing the work, not through layers of management.
               </p>
             </div>
             <ul className="grid gap-7 sm:grid-cols-2 sm:gap-8 lg:col-span-8 lg:gap-10">
@@ -112,6 +89,34 @@ export default function AboutPage() {
                 </Reveal>
               ))}
             </ul>
+          </div>
+
+          <div className="grid gap-16 border-t border-hairline py-24 lg:grid-cols-12 lg:gap-12 lg:py-28">
+            <div className="lg:col-span-4">
+              <Eyebrow>Technology Experience</Eyebrow>
+              <h2 className="mt-8 font-serif text-display-lg text-ink">
+                Platforms we work alongside.
+              </h2>
+            </div>
+            <div className="lg:col-span-8">
+              <p className="editorial-body">
+                Our consultants have experience supporting implementations
+                and optimisation initiatives involving these platforms. We
+                position ourselves as advisory, delivery oversight, and
+                client-side coordination — working alongside, rather than
+                replacing, systems integrators.
+              </p>
+              <ul className="mt-10 grid grid-cols-2 gap-px overflow-hidden border border-hairline bg-hairline sm:grid-cols-3">
+                {technologies.map((t) => (
+                  <li
+                    key={t}
+                    className="flex items-center justify-center bg-background px-6 py-7 text-center text-sm font-medium tracking-[0.06em] text-ink transition-colors duration-700 hover:bg-surface hover:text-accent"
+                  >
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </Container>
       </section>

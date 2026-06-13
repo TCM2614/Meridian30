@@ -18,19 +18,18 @@ export function CTABanner() {
         <div className="grid gap-16 lg:grid-cols-12 lg:items-end lg:gap-12">
           <div className="lg:col-span-8">
             <h2 className="max-w-[20ch] font-serif text-display-xl text-ink">
-              <LineReveal>The most important</LineReveal>
-              <LineReveal delay={0.08}>
-                conversations are the ones
-              </LineReveal>
+              <LineReveal>Tell us about</LineReveal>
+              <LineReveal delay={0.08}>the work in front</LineReveal>
               <LineReveal delay={0.16}>
-                worth taking <em className="accent-italic">seriously.</em>
+                of <em className="accent-italic">you.</em>
               </LineReveal>
             </h2>
             <Reveal delay={0.3} className="mt-10">
               <p className="editorial-body">
-                If your institution is facing an inflection point — an
-                agenda that will define the next decade — we&apos;d welcome
-                the conversation.
+                If you are scoping a programme, preparing a major bid, or
+                planning a technology implementation, we would welcome a
+                direct conversation. Every enquiry is read by a partner and
+                answered personally — typically within one business day.
               </p>
             </Reveal>
           </div>

@@ -2,26 +2,31 @@ export const site = {
   name: "M30",
   shortName: "Meridian Thirty",
   tagline: "Strategy with conviction. Outcomes that endure.",
+  name: "Meridian Thirty",
+  shortName: "M30",
+  tagline: "Delivered expertise. From strategy to implementation.",
   description:
-    "Meridian Thirty is a boutique strategy consultancy partnering with leadership teams to navigate inflection points and build enduring institutions.",
+    "Meridian Thirty is a boutique consultancy of senior practitioners. We deliver programme management, advisory, technology implementation support, and bid leadership for organisations across the public and private sectors.",
   contact: {
     email: "partners@meridianthirty.com",
     phone: "+1 (212) 555 0130",
     address: "London, United Kingdom",
+    email: "",
+    phone: "",
+    address: "London, United Kingdom",
+    fullAddress: "",
+    response: "Within one business day",
   },
   social: [
     { label: "LinkedIn", href: "#" },
-    { label: "X", href: "#" },
   ],
 }
 
 export const navLinks = [
-  { label: "Our Work", href: "/our-work" },
   { label: "Capabilities", href: "/capabilities" },
   { label: "Industries", href: "/industries" },
-  { label: "Insights", href: "/insights" },
+  { label: "Our Work", href: "/our-work" },
   { label: "About", href: "/about" },
-  { label: "Careers", href: "/careers" },
   { label: "Contact", href: "/contact" },
 ] as const
 
@@ -35,218 +40,252 @@ export type Capability = {
 export const capabilities: Capability[] = [
   {
     number: "01",
-    title: "Strategy",
+    title: "Project & Programme Management",
     blurb:
-      "Corporate, growth, and portfolio strategy designed to compound advantage over decades, not quarters.",
+      "PMO design, governance, and delivery oversight for complex programmes — embedded alongside the leaders accountable for the outcome.",
     bullets: [
-      "Corporate & growth strategy",
-      "Market entry & geographic expansion",
-      "M&A and portfolio shaping",
-      "Pricing & commercial strategy",
+      "PMO setup",
+      "Governance frameworks",
+      "RAID management",
+      "Reporting & dashboards",
+      "Service transition",
     ],
   },
   {
     number: "02",
-    title: "Transformation",
+    title: "Consultancy",
     blurb:
-      "End-to-end programmes that re-architect operating models, technology, and ways of working under one cadence.",
+      "Practical advisory grounded in delivery experience — business analysis, process design, and change management for organisations under pressure to act.",
     bullets: [
-      "Operating model redesign",
-      "Digital & AI transformation",
-      "Cost & capital programmes",
-      "Programme delivery (PMO)",
+      "Business analysis",
+      "Process mapping",
+      "Requirements management",
+      "Change management",
+      "Training & adoption",
     ],
   },
   {
     number: "03",
-    title: "Performance",
+    title: "Tender & Bid Writing",
     blurb:
-      "Margin, working capital, and revenue interventions executed with the rigour of an owner-operator.",
+      "Senior bid leadership for complex tenders — strategy, authoring, and submission support across public sector and private sector procurements.",
     bullets: [
-      "Commercial performance",
-      "Procurement & supply chain",
-      "Working capital release",
-      "Revenue acceleration",
+      "Bid strategy & qualification",
+      "Win theme development",
+      "Authoring & editing",
+      "Commercial input",
+      "Submission management",
     ],
   },
   {
     number: "04",
-    title: "Organisation",
+    title: "Technology Implementation",
     blurb:
-      "Leadership, design, and culture work that makes high performance the natural state of the institution.",
+      "Implementation coordination and adoption management for enterprise platforms — providing the client-side capability that ensures rollouts land and are used.",
     bullets: [
-      "Leadership & succession",
-      "Org design & talent",
-      "Culture & change",
-      "Board effectiveness",
+      "Vendor management",
+      "Implementation coordination",
+      "Configuration support",
+      "Reporting & dashboards",
+      "Adoption & training",
     ],
   },
+]
+
+/**
+ * Detailed capability content for the Capabilities page.
+ * Provides overview, scope of services, and typical engagement scenarios.
+ */
+export type CapabilityDetail = Capability & {
+  overview: string
+  scope: string[]
+  scenarios: string[]
+  positioning?: string
+}
+
+export const capabilityDetails: CapabilityDetail[] = [
+  {
+    ...capabilities[0],
+    overview:
+      "We provide PMO design, governance, and delivery oversight for complex programmes — embedded in the work alongside the leaders accountable for the outcome. Our practitioners have run the work, not just advised on it.",
+    scope: [
+      "PMO setup and operating model",
+      "Governance frameworks and steering committee design",
+      "RAID (Risks, Assumptions, Issues, Dependencies) management",
+      "Programme reporting and executive dashboards",
+      "Resource and dependency management",
+      "Stage gate and milestone management",
+      "Service transition and operational handover",
+    ],
+    scenarios: [
+      "A multi-year transformation programme that has lost cadence and needs an embedded PMO to re-establish reporting and accountability.",
+      "A major implementation requiring independent governance and assurance, distinct from the delivery vendor.",
+      "A portfolio of initiatives that needs consolidation under a single PMO with consistent reporting to the executive team.",
+    ],
+  },
+  {
+    ...capabilities[1],
+    overview:
+      "Practical advisory grounded in delivery experience. Our consultants bring business analysis, process design, and change management capability to the moments where organisations need to act with confidence.",
+    scope: [
+      "Business analysis and discovery",
+      "Process mapping and target operating model design",
+      "Requirements definition and management",
+      "Change management and stakeholder engagement",
+      "Training and adoption design",
+      "Operating model assessments",
+      "Capability and gap analyses",
+    ],
+    scenarios: [
+      "A process redesign ahead of a technology implementation, where requirements need to be captured rigorously before vendor selection.",
+      "A change programme where the target operating model is agreed but adoption across teams has stalled.",
+      "An organisation preparing for a regulatory or operating model change that needs structured business analysis and impact assessment.",
+    ],
+  },
+  {
+    ...capabilities[2],
+    overview:
+      "Senior bid leadership for complex tenders — strategy, authoring, and submission support across public sector frameworks and private sector procurements.",
+    scope: [
+      "Bid strategy and qualification",
+      "Win theme development",
+      "Solution narrative and storyline design",
+      "Lead authoring, editing, and quality assurance",
+      "Pricing and commercial input (in conjunction with client teams)",
+      "Stakeholder management and review cadence",
+      "Submission and clarification management",
+      "Post-bid lessons learned",
+    ],
+    scenarios: [
+      "A public sector bid requiring formal compliance with framework requirements and strong narrative response writing.",
+      "A private sector RFP where the win theme and solution narrative need sharpening and consistent expression across the document.",
+      "A team without dedicated bid resource that needs interim senior bid management for a single, high-priority opportunity.",
+    ],
+  },
+  {
+    ...capabilities[3],
+    overview:
+      "Implementation coordination and adoption management for enterprise platforms. We do not replace systems integrators — we provide the client-side capability that ensures implementations land, are adopted, and deliver value.",
+    positioning:
+      "Advisory, delivery oversight, configuration support, implementation coordination, and adoption management.",
+    scope: [
+      "Vendor selection and management",
+      "Implementation coordination and oversight",
+      "Configuration support (working alongside SI partners)",
+      "Data migration coordination",
+      "User acceptance testing leadership",
+      "Reporting and dashboard design",
+      "Service transition and operational handover",
+      "Adoption strategy and training design",
+    ],
+    scenarios: [
+      "A Salesforce implementation where the SI is delivering, but the client needs senior coordination, business analysis, and adoption support.",
+      "A reporting consolidation across Power BI and Tableau that requires requirements capture, dashboard design, and rollout.",
+      "A ServiceNow rollout where end-user adoption is the primary risk and a structured adoption programme is needed.",
+    ],
+  },
+]
+
+export const technologies = [
+  "Salesforce",
+  "Microsoft 365",
+  "SharePoint",
+  "ServiceNow",
+  "Jira",
+  "Confluence",
+  "TargetProcess",
+  "Tableau",
+  "Power BI",
+]
+
+export const sectors = [
+  "Financial Services",
+  "Public Sector",
+  "Technology & Software",
+  "Energy & Utilities",
+  "Infrastructure & Construction",
 ]
 
 export const industries = [
   {
     title: "Financial Services",
     blurb:
-      "Banks, asset managers, insurers, and market infrastructure navigating regulatory change and platform economics.",
+      "Experience supporting programmes, transformation initiatives, reporting solutions, and technology implementations across retail and wholesale banking, asset management, and insurance.",
   },
   {
-    title: "Energy & Resources",
+    title: "Public Sector & Government",
     blurb:
-      "Integrated majors, utilities, and developers shaping the transition with credible, capital-disciplined plans.",
+      "Delivery, advisory, and bid support for central government, local authorities, and arm's-length bodies — including programme governance, business analysis, and major framework submissions.",
   },
   {
-    title: "Healthcare & Life Sciences",
+    title: "Technology & Software",
     blurb:
-      "Payers, providers, and biopharma redefining access, pipeline strategy, and enterprise productivity.",
+      "Programme management and implementation support for technology businesses delivering complex platform rollouts, reporting consolidations, and operational change.",
   },
   {
-    title: "Industrials & Mobility",
+    title: "Energy & Utilities",
     blurb:
-      "Manufacturers, defence, and mobility leaders re-engineering footprints for resilience and growth.",
+      "Experience supporting transformation programmes, reporting solutions, and operational change initiatives across regulated and unregulated parts of the energy and utilities sectors.",
   },
   {
-    title: "Technology & Telecom",
+    title: "Infrastructure & Construction",
     blurb:
-      "Hyperscalers, software, and operators positioning for the AI-native enterprise.",
-  },
-  {
-    title: "Consumer & Retail",
-    blurb:
-      "Brand owners and retailers compounding equity through omnichannel and category leadership.",
-  },
-  {
-    title: "Private Capital",
-    blurb:
-      "PE, infrastructure, and sovereigns underwriting and accelerating value through commercial diligence and value creation.",
-  },
-  {
-    title: "Public & Social Sector",
-    blurb:
-      "Governments, regulators, and institutions delivering reform with measurable public outcomes.",
-  },
-]
-
-export const insights = [
-  {
-    eyebrow: "Strategy",
-    title: "The CEO agenda for the next decade of compounding advantage",
-    excerpt:
-      "What separates institutions that compound from those that drift is rarely strategy on paper—it is the operating cadence behind it.",
-    readTime: "8 min read",
-    date: "May 2026",
-    href: "/insights",
-  },
-  {
-    eyebrow: "Transformation",
-    title: "AI as an operating system, not a programme",
-    excerpt:
-      "Treating AI as a portfolio of pilots is the most expensive way to fall behind. The leaders are wiring it into the core.",
-    readTime: "11 min read",
-    date: "April 2026",
-    href: "/insights",
-  },
-  {
-    eyebrow: "Performance",
-    title: "The margin reset: a playbook for the next cycle",
-    excerpt:
-      "Inflation has receded; the structural pressure on margin has not. A practical guide to the levers that still work.",
-    readTime: "9 min read",
-    date: "March 2026",
-    href: "/insights",
-  },
-  {
-    eyebrow: "Organisation",
-    title: "Designing the executive team for the AI-native enterprise",
-    excerpt:
-      "New work requires new seats at the table. We examine how leading boards are reconfiguring the C-suite.",
-    readTime: "7 min read",
-    date: "February 2026",
-    href: "/insights",
-  },
-  {
-    eyebrow: "Private Capital",
-    title: "Underwriting in a higher-for-longer rate environment",
-    excerpt:
-      "Why operating value creation, not multiple expansion, is now the principal source of returns.",
-    readTime: "10 min read",
-    date: "January 2026",
-    href: "/insights",
-  },
-  {
-    eyebrow: "Energy",
-    title: "Capital discipline and the credible transition",
-    excerpt:
-      "Boards are being asked to deliver returns and decarbonise. The emerging archetypes that reconcile both.",
-    readTime: "12 min read",
-    date: "December 2025",
-    href: "/insights",
+      "PMO, governance, and reporting support for capital projects and infrastructure programmes — including bid leadership for major framework and project tenders.",
   },
 ]
 
 export const work = [
   {
-    client: "Global Universal Bank",
+    client: "Tier-1 European Bank",
     sector: "Financial Services",
     headline:
-      "Re-architecting the operating model for an AI-native wholesale bank",
-    metric: "$1.4B run-rate impact",
+      "Independent governance for a multi-year platform implementation",
+    summary:
+      "Established the client-side PMO, governance, and assurance structure for a complex platform implementation delivered by a tier-1 systems integrator.",
+    outcome:
+      "Re-baselined the programme plan, introduced a weekly executive reporting cadence, and recovered six months of slippage over a 14-month assignment.",
+    metric: "6 months recovered",
     image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    client: "European Energy Major",
-    sector: "Energy & Resources",
+    client: "UK Central Government Department",
+    sector: "Public Sector",
     headline:
-      "A credible transition portfolio: capital allocation through 2035",
-    metric: "€18B reallocated",
+      "Consolidating a multi-portfolio PMO under a single reporting cadence",
+    summary:
+      "Redesigned the PMO operating model, governance forums, and reporting suite for a portfolio of more than thirty programmes.",
+    outcome:
+      "Reduced executive reporting effort by approximately 40% while improving forecast accuracy and stage-gate compliance.",
+    metric: "~40% reporting effort reduced",
     image:
-      "https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    client: "North American Health System",
-    sector: "Healthcare",
+    client: "High-growth SaaS business",
+    sector: "Technology & Software",
     headline:
-      "Network redesign and clinical productivity for a 14-state system",
-    metric: "320 bps margin uplift",
+      "A Salesforce optimisation programme aligned to the operating model",
+    summary:
+      "Following an initial implementation, led the business analysis, process redesign, and adoption work to bring the platform in line with the target operating model.",
+    outcome:
+      "Reduced sales-cycle administrative effort by approximately 25% and lifted CRM adoption above 90% across the field organisation.",
+    metric: ">90% CRM adoption",
     image:
-      "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1600&q=80",
   },
   {
-    client: "Tier-1 Industrial",
-    sector: "Industrials",
-    headline:
-      "Footprint resilience and a $2B working capital release programme",
-    metric: "$2.1B cash unlocked",
+    client: "Major UK Infrastructure Group",
+    sector: "Infrastructure & Construction",
+    headline: "Senior bid leadership for a multi-lot framework submission",
+    summary:
+      "Provided bid strategy, lead authoring, and submission management for a complex public sector framework tender across multiple lots.",
+    outcome:
+      "Two of three submitted lots awarded; the client subsequently retained the team across two further bid cycles.",
+    metric: "2 of 3 lots awarded",
     image:
-      "https://images.unsplash.com/photo-1565043666747-69f6646db940?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=80",
   },
-  {
-    client: "Global Software Platform",
-    sector: "Technology",
-    headline: "From product-led growth to enterprise-grade go-to-market",
-    metric: "2.3x ACV expansion",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    client: "Sovereign Investor",
-    sector: "Private Capital",
-    headline: "An operating playbook for a $40B private equity portfolio",
-    metric: "+480 bps IRR",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1600&q=80",
-  },
-]
-
-export const trustedBy = [
-  "ATLAS CAPITAL",
-  "NORTHWIND",
-  "HELIOS ENERGY",
-  "MERIDIAN HEALTH",
-  "VANTAGE BANK",
-  "AURELIAN",
-  "STRATA INDUSTRIES",
-  "KESTREL & CO",
 ]
 
 export const leadership = [
@@ -264,38 +303,44 @@ export const leadership = [
     name: "Alexandra Scott",
     role: "Director - Technology Implementation, Project and Programme Management",
     bio: "to be completed",
+    bio: "Two decades leading complex programmes across financial services, technology, and the public sector. Former programme director at a tier-1 systems integrator.",
+  },
+  {
+    name: "Idris Okafor",
+    role: "Senior Partner — Delivery",
+    bio: "Programme delivery, PMO, and assurance specialist with experience across major regulatory and platform implementations.",
+  },
+  {
+    name: "Hana Sato",
+    role: "Senior Partner — Consultancy",
+    bio: "Business analysis and operating model lead with deep experience across financial services, technology, and the public sector.",
+  },
+  {
+    name: "Theodore Lange",
+    role: "Senior Partner — Bids",
+    bio: "Senior bid leader with a track record across public sector frameworks and major private sector tenders.",
   },
 ]
 
-export const careerOpenings = [
+export const principles = [
   {
-    role: "Engagement Manager — Strategy",
-    location: "New York / London",
-    type: "Full-time",
+    title: "Senior-led, always.",
+    body:
+      "Every engagement is led by a partner who is on the work, every week. There are no pyramids, no rotations, and no surrogates.",
   },
   {
-    role: "Associate Partner — Transformation",
-    location: "Singapore",
-    type: "Full-time",
+    title: "Practitioners, not commentators.",
+    body:
+      "Our consultants have run programmes, written winning bids, and delivered platform implementations — they are not theorists.",
   },
   {
-    role: "Senior Associate — Private Capital",
-    location: "London",
-    type: "Full-time",
+    title: "Few engagements, deeply done.",
+    body:
+      "We accept a deliberate number of engagements at any one time. The discipline of saying no is what allows us to deliver the work we accept.",
   },
   {
-    role: "Consultant — Performance",
-    location: "Dubai",
-    type: "Full-time",
-  },
-  {
-    role: "Knowledge Specialist — Energy",
-    location: "Houston",
-    type: "Full-time",
-  },
-  {
-    role: "Design Lead — Brand & Editorial",
-    location: "Remote (Americas)",
-    type: "Full-time",
+    title: "Direct, plain English.",
+    body:
+      "We work with leaders who want a straight answer. Reports, decks, and conversations are honest, concise, and free of jargon.",
   },
 ]

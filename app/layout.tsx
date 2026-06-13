@@ -22,20 +22,41 @@ const serif = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL("https://meridianthirty.com"),
   title: {
-    default: `${site.name} — ${site.tagline}`,
+    default: `${site.name} — Boutique Delivery Consultancy | Programmes, Technology, Bids`,
     template: `%s — ${site.name}`,
   },
-  description: site.description,
+  description:
+    "Meridian Thirty is a UK boutique consultancy of senior practitioners. We deliver programme management, advisory, technology implementation support, and bid leadership across the public and private sectors.",
+  keywords: [
+    "consultancy",
+    "boutique consultancy",
+    "programme management",
+    "PMO",
+    "bid writing",
+    "tender writing",
+    "technology implementation",
+    "Salesforce",
+    "ServiceNow",
+    "Power BI",
+    "Tableau",
+    "London consultancy",
+    "public sector consultancy",
+    "Meridian Thirty",
+  ],
   openGraph: {
-    title: site.name,
+    title: `${site.name} — Boutique Delivery Consultancy`,
     description: site.description,
     type: "website",
     siteName: site.name,
+    locale: "en_GB",
   },
   twitter: {
     card: "summary_large_image",
     title: site.name,
     description: site.description,
+  },
+  alternates: {
+    canonical: "/",
   },
 }
 
@@ -45,7 +66,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="en-GB" className={`${sans.variable} ${serif.variable}`}>
       <body className="min-h-dvh bg-background text-ink antialiased">
         <a
           href="#main"

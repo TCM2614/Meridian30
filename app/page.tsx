@@ -1,7 +1,7 @@
 import { Hero } from "@/components/sections/Hero"
-import { TrustedBy } from "@/components/sections/TrustedBy"
+import { SectorsStrip } from "@/components/sections/SectorsStrip"
 import { CapabilityCards } from "@/components/sections/CapabilityCards"
-import { FeaturedInsight } from "@/components/sections/FeaturedInsight"
+import { TechnologyStrip } from "@/components/sections/TechnologyStrip"
 import { AboutSection } from "@/components/sections/AboutSection"
 import { CTABanner } from "@/components/sections/CTABanner"
 
@@ -9,9 +9,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <TrustedBy />
+      <SectorsStrip />
       <CapabilityCards />
-      <FeaturedInsight />
+      <TechnologyStrip />
       <AboutSection />
       <CTABanner />
     </>
