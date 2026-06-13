@@ -250,25 +250,21 @@ export const trustedBy = [
 ]
 
 export const leadership = [
-  {
-    name: "Anneliese Marchetti",
-    role: "Managing Partner",
-    bio: "Two decades advising boards on corporate strategy and transformation across Europe and the Americas.",
+ {
+    name: "Takudzwa Craig Madhlazi,
+    role: "Managing Director ",
+    bio: "",
   },
   {
-    name: "Idris Okafor",
-    role: "Senior Partner, Transformation",
-    bio: "Operating-partner background; led enterprise programmes for global banks and industrials.",
+    name: "Daniel Okocha",
+    role: "Director - Consultancy, Tender and Bid Writing",
+    bio: "Daniella Okocha is a bid and business strategy professional with expertise spanning commercial operations, legal advisory, governance, and business transformation. Combining academic excellence in law, business, and management with hands-on experience across the UK and Africa, she brings a unique ability to translate complex challenges into practical, results-driven solutions. Her analytical thinking, stakeholder engagement, and strategic execution has successfully improved bid performance, enhanced organisational productivity, strengthened governance frameworks, and delivered process optimisation initiatives that create measurable business value. She offers organisations a rare blend of legal insight, commercial awareness, and operational expertise, enabling teams to improve efficiency, mitigate risk and drive growth.
+",
   },
   {
-    name: "Hana Sato",
-    role: "Senior Partner, Performance",
-    bio: "Margin, capital, and supply chain specialist with deep Asia-Pacific experience.",
-  },
-  {
-    name: "Theodore Lange",
-    role: "Senior Partner, Private Capital",
-    bio: "Former investor; advises sovereign and PE clients on diligence and value creation.",
+    name: "Alexandra Scott",
+    role: "Director - Technology Implementation, Project and Programme Management",
+    bio: "",
   },
 ]
 
