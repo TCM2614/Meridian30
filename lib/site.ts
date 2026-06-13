@@ -252,7 +252,7 @@ export const trustedBy = [
 export const leadership = [
  {
     name: "Takudzwa Craig Madhlazi,
-    role: "Managing Director ",
+    role: "Managing Partner",
     bio: "",
   },
   {
