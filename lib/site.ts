@@ -298,21 +298,6 @@ export const leadership = [
     role: "Director - Technology Implementation, Project and Programme Management",
     bio: "Two decades leading complex programmes across financial services, technology, and the public sector. Former programme director at a tier-1 systems integrator.",
   },
-  {
-    name: "Idris Okafor",
-    role: "Senior Partner — Delivery",
-    bio: "Programme delivery, PMO, and assurance specialist with experience across major regulatory and platform implementations.",
-  },
-  {
-    name: "Hana Sato",
-    role: "Senior Partner — Consultancy",
-    bio: "Business analysis and operating model lead with deep experience across financial services, technology, and the public sector.",
-  },
-  {
-    name: "Theodore Lange",
-    role: "Senior Partner — Bids",
-    bio: "Senior bid leader with a track record across public sector frameworks and major private sector tenders.",
-  },
 ]
 
 export const principles = [
