@@ -25,7 +25,7 @@ export function Hero() {
               Boutique Delivery Consultancy · London
             </motion.div>
 
-            <h1 className="mt-12 max-w-[16ch] font-serif text-display-3xl text-ink">
+            <h1 className="mt-12 max-w-[16ch] font-serif text-display-2xl text-ink">
               <LineReveal immediate delay={0.05}>
                 Delivered expertise.
               </LineReveal>
