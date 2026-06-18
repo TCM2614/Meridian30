@@ -1,16 +1,10 @@
 export const site = {
-  name: "M30",
-  shortName: "Meridian Thirty",
-  tagline: "Strategy with conviction. Outcomes that endure.",
   name: "Meridian Thirty",
   shortName: "M30",
   tagline: "Delivered expertise. From strategy to implementation.",
   description:
     "Meridian Thirty is a boutique consultancy of senior practitioners. We deliver programme management, advisory, technology implementation support, and bid leadership for organisations across the public and private sectors.",
   contact: {
-    email: "partners@meridianthirty.com",
-    phone: "+1 (212) 555 0130",
-    address: "London, United Kingdom",
     email: "",
     phone: "",
     address: "London, United Kingdom",
@@ -290,7 +284,7 @@ export const work = [
 
 export const leadership = [
  {
-    name: "Takudzwa Craig Madhlazi,
+    name: "Takudzwa Craig Madhlazi",
     role: "Managing Partner",
     bio: "to be completed",
   },
@@ -302,7 +296,6 @@ export const leadership = [
   {
     name: "Alexandra Scott",
     role: "Director - Technology Implementation, Project and Programme Management",
-    bio: "to be completed",
     bio: "Two decades leading complex programmes across financial services, technology, and the public sector. Former programme director at a tier-1 systems integrator.",
   },
   {
