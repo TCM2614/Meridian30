@@ -284,24 +284,19 @@ export const work = [
 
 export const leadership = [
   {
-    name: "Anneliese Marchetti",
-    role: "Managing Partner",
+    name: "Takudzwa Craig Madhlazi",
+    role: "Managing Director",
+    bio: "Taku Madhlazi is the Managing Director of M30, specialising in project delivery, operational transformation, and business performance improvement across EMEA. His experience spans real estate and construction, technical infrastructure and networking, data and analytics, and commercial operations. By combining strategic thinking with disciplined execution, he has delivered significant cost savings, operational efficiencies, and business improvements, including generating over £3 million in value for organisations. Taku partners with clients to solve complex challenges, optimise performance, and deliver sustainable, long-term results.",
+  },
+  {
+    name: "Daniella Okocha",
+    role: "Director - Consultancy, Tender and Bid Writing",
+    bio: "Daniella Okocha is a bid and business strategy professional with expertise spanning commercial operations, legal advisory, governance, and business transformation. Combining academic excellence in law, business, and management with hands-on experience across the UK and Africa, she brings a unique ability to translate complex challenges into practical, results-driven solutions. Her analytical thinking, stakeholder engagement, and strategic execution has successfully improved bid performance, enhanced organisational productivity, strengthened governance frameworks, and delivered process optimisation initiatives that create measurable business value. She offers organisations a rare blend of legal insight, commercial awareness, and operational expertise, enabling teams to improve efficiency, mitigate risk and drive growth.",
+  },
+  {
+    name: "Alexandra Scott",
+    role: "Director - Technology Implementation, Project and Programme Management",
     bio: "Two decades leading complex programmes across financial services, technology, and the public sector. Former programme director at a tier-1 systems integrator.",
-  },
-  {
-    name: "Idris Okafor",
-    role: "Senior Partner — Delivery",
-    bio: "Programme delivery, PMO, and assurance specialist with experience across major regulatory and platform implementations.",
-  },
-  {
-    name: "Hana Sato",
-    role: "Senior Partner — Consultancy",
-    bio: "Business analysis and operating model lead with deep experience across financial services, technology, and the public sector.",
-  },
-  {
-    name: "Theodore Lange",
-    role: "Senior Partner — Bids",
-    bio: "Senior bid leader with a track record across public sector frameworks and major private sector tenders.",
   },
 ]
 

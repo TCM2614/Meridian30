@@ -2,5 +2,10 @@
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
-  ]
+  ],
+  "rules": {
+    "no-dupe-keys": "error",
+    "no-dupe-else-if": "error",
+    "no-unreachable": "error"
+  }
 }

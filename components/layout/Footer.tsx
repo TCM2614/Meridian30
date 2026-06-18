@@ -21,6 +21,7 @@ const columns = [
   {
     title: "Office",
     links: [
+      { label: "London", href: "#" },
       { label: "London, UK", href: "/contact" },
     ],
   },
