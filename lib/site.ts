@@ -1,16 +1,10 @@
 export const site = {
-  name: "M30",
-  shortName: "Meridian Thirty",
-  tagline: "Strategy with conviction. Outcomes that endure.",
   name: "Meridian Thirty",
   shortName: "M30",
   tagline: "Delivered expertise. From strategy to implementation.",
   description:
     "Meridian Thirty is a boutique consultancy of senior practitioners. We deliver programme management, advisory, technology implementation support, and bid leadership for organisations across the public and private sectors.",
   contact: {
-    email: "partners@meridianthirty.com",
-    phone: "+1 (212) 555 0130",
-    address: "London, United Kingdom",
     email: "",
     phone: "",
     address: "London, United Kingdom",
@@ -289,10 +283,10 @@ export const work = [
 ]
 
 export const leadership = [
- {
-    name: "Takudzwa Craig Madhlazi,
-    role: "Managing Partner",
-    bio: "to be completed",
+  {
+    name: "Takudzwa Craig Madhlazi",
+    role: "Managing Director",
+    bio: "Taku Madhlazi is the Managing Director of M30, specialising in project delivery, operational transformation, and business performance improvement across EMEA. His experience spans real estate and construction, technical infrastructure and networking, data and analytics, and commercial operations. By combining strategic thinking with disciplined execution, he has delivered significant cost savings, operational efficiencies, and business improvements, including generating over £3 million in value for organisations. Taku partners with clients to solve complex challenges, optimise performance, and deliver sustainable, long-term results.",
   },
   {
     name: "Daniella Okocha",
@@ -302,23 +296,7 @@ export const leadership = [
   {
     name: "Alexandra Scott",
     role: "Director - Technology Implementation, Project and Programme Management",
-    bio: "to be completed",
     bio: "Two decades leading complex programmes across financial services, technology, and the public sector. Former programme director at a tier-1 systems integrator.",
-  },
-  {
-    name: "Idris Okafor",
-    role: "Senior Partner — Delivery",
-    bio: "Programme delivery, PMO, and assurance specialist with experience across major regulatory and platform implementations.",
-  },
-  {
-    name: "Hana Sato",
-    role: "Senior Partner — Consultancy",
-    bio: "Business analysis and operating model lead with deep experience across financial services, technology, and the public sector.",
-  },
-  {
-    name: "Theodore Lange",
-    role: "Senior Partner — Bids",
-    bio: "Senior bid leader with a track record across public sector frameworks and major private sector tenders.",
   },
 ]
 
