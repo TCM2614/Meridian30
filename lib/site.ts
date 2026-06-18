@@ -283,10 +283,10 @@ export const work = [
 ]
 
 export const leadership = [
- {
+  {
     name: "Takudzwa Craig Madhlazi",
-    role: "Managing Partner",
-    bio: "to be completed",
+    role: "Managing Director",
+    bio: "Taku Madhlazi is the Managing Director of M30, specialising in project delivery, operational transformation, and business performance improvement across EMEA. His experience spans real estate and construction, technical infrastructure and networking, data and analytics, and commercial operations. By combining strategic thinking with disciplined execution, he has delivered significant cost savings, operational efficiencies, and business improvements, including generating over £3 million in value for organisations. Taku partners with clients to solve complex challenges, optimise performance, and deliver sustainable, long-term results.",
   },
   {
     name: "Daniella Okocha",
